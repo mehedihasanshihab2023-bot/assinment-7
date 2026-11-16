@@ -19,13 +19,11 @@ export default function Ticker({ products }: { products: Product[] }) {
           <span
             key={`${p.slug}-${i}`}
             className="flex shrink-0 items-center gap-1.5 whitespace-nowrap px-5 text-[13px]"
-            dir="ltr"
-            style={{ direction: "ltr" }}
           >
             <span className="text-base" aria-hidden>
               {p.image}
             </span>
-            <span className="font-medium" style={{ direction: "rtl" }}>
+            <span className="font-medium">
               {p.nameBn} {formatTaka(p.today)} টাকা/{unitShort(p.unit)}
             </span>
             <TickerBadge change={p.change} />
